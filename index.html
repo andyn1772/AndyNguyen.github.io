@@ -6,8 +6,160 @@
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
         <title>Andy Nguyen's Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f675434add.js" crossorigin="anonymous"></script>
     </head>
     <Body>
+        <div id="header">
+            <div class = "container">
+                <nav>
+                    <img src="" class = logo>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#coursework">Education</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Software Engineer</p>
+                    <h1>Hi, I'm <span>Andy Nguyen</span>,<br>[blank]</h1>
+                </div>
+            </div>
+        </div>
+        <!-- -----about---- -->
+        <div id="about">
+            <div class = "container">
+                <div class = "row">
+                    <div class="about-col-1">
+                        <img src="images/user.JPG">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>dasdsafasdfadsfdasfsafsafsafasfdsafsfafafdasfasdfasdfasdfasdfasdfsafsafsadfadsfa
+                            sdfsadfdsafsafsafsadfsafasdfsafdsafsafsadfsadfasfasfadsfsafasfasdfasfasgfgsdfg</p>
+
+                        <div class="tab-titles">
+                            <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class = "tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Bullet1</span><br>Description</li>
+                                <li><span>Bullet2</span><br>Description</li>
+                                <li><span>Bullet3</span><br>Description</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Sept. 2022 - Dec. 2022</span><br>Software Engineer Intern @ Logitech</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Sept. 2018 - June 2023</span><br>B.S. in Computer Science @ University of California, Irvine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -----Services---- --> <!-- Put portfolio section first then services. Services can be changed to Detailed Education.-->
+        <!-- I can list the classes I've taken, a brief description, and links to various coding work from the courses.-->
+        <!-- ----Coursework---- -->
+
+        <!-- -----Portfolio---- -->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list1">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                        <div class="layer">
+                            <h3>Toxic Comment Recognition AI</h3>
+                            <p>Description about Project</p>
+                            <a href ="https://github.com/andyn1772/Toxic-Comment-Recognition-AI"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.jpg">
+                        <div class="layer">
+                            <h3>Search Engine</h3>
+                            <p>Description about Project</p>
+                            <a href ="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png">
+                        <div class="layer">
+                            <h3>Shell Client & Server Communcation</h3>
+                            <p>Description about Project</p>
+                            <a href ="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See More</a>
+                <!--
+                <div class="work-list2">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.jpg">
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png">
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+        <!-- -----Contact---- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>anguyenp400@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i>(714) 623-6038</p>
+                        <div class="social-icons">
+                            <a href="www.linkedin.com/in/andynguyen400"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/andyn1772"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a href="images/Nguyen, Andy - Resume.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright ⓒ Andy Nguyen</p>
+            </div>
+        </div>
         
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+
     </Body>
 </html>
